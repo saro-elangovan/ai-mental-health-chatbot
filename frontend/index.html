@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wellness Support Chatbot</title>
+  <meta name="description" content="A general wellbeing information chatbot. Not a medical or emergency service." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <h1>Wellness Support</h1>
+        <span id="status" class="status" data-state="checking" title="Server status">Connecting…</span>
+      </div>
+      <div class="controls">
+        <div class="modes" role="tablist" aria-label="Chat mode">
+          <button type="button" role="tab" id="mode-chat" class="mode active" aria-selected="true">Chat</button>
+          <button type="button" role="tab" id="mode-docs" class="mode" aria-selected="false">Document Q&amp;A</button>
+        </div>
+        <button type="button" id="clear-btn" class="ghost">Clear chat</button>
+      </div>
+    </header>
+
+    <p class="disclaimer">
+      This is an AI assistant for general wellbeing information. It is not a doctor, therapist, or emergency service.
+      If you are in danger, contact your local emergency number.
+    </p>
+
+    <p id="mode-hint" class="mode-hint" hidden></p>
+
+    <main id="messages" class="messages" role="log" aria-live="polite" aria-label="Conversation"></main>
+
+    <form id="composer" class="composer" autocomplete="off">
+      <label for="input" class="sr-only">Your message</label>
+      <textarea id="input" rows="1" maxlength="2000" placeholder="Type a message. Enter to send, Shift+Enter for a new line."></textarea>
+      <button type="submit" id="send-btn" class="send">Send</button>
+    </form>
+  </div>
+
+  <div id="toast" class="toast" role="alert" hidden></div>
+  <script src="/script.js"></script>
+</body>
+</html>

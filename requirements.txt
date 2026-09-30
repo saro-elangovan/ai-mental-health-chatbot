@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn>=0.30
+pydantic-settings>=2.4
+openai>=1.50
+llama-index-core>=0.12
+llama-index-llms-openai>=0.3
+llama-index-llms-openai-like>=0.3
+llama-index-embeddings-openai>=0.3
+llama-index-readers-file>=0.4
